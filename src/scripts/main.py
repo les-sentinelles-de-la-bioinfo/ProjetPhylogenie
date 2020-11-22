@@ -94,9 +94,9 @@ def ML_tree(infile, outfile, file_type):
     if(user_OS == 'darwin'):
         cmd = PhymlCommandline(cmd='../../etc/tools/MacOS/PhyML-3.1/PhyML-3.1_macOS-MountainLion', input='../../data/sauvegardes/' + outfile + '.phylip')
     if(user_OS == 'linux'):
-        cmd = PhymlCommandline(cmd='../../etc/tools/Linux/PhyML-3.1/PhyML-3.1_linux64', input='../../data/sauvegardes/msa_clustal.phylip')
+        cmd = PhymlCommandline(cmd='../../etc/tools/Linux/PhyML-3.1/PhyML-3.1_linux64', input='../../data/sauvegardes/' + outfile + '.phylip')
     if(user_OS == 'win32'):
-        cmd = PhymlCommandline(cmd='../../etc/tools/Windows/PhyML-3.1/PhyML-3.1_win32.exe', input='../../data/sauvegardes/msa_clustal.phylip')
+        cmd = PhymlCommandline(cmd='../../etc/tools/Windows/PhyML-3.1/PhyML-3.1_win32.exe', input='../../data/sauvegardes/' + outfile + '.phylip')
     
     out_log, err_log = cmd()
     tree = Phylo.read('../../data/sauvegardes/' + outfile + '.phylip_phyml_tree.txt', 'newick')
