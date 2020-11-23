@@ -5,6 +5,7 @@ from Bio.Align.Applications import ClustalwCommandline, MuscleCommandline
 from Bio.Phylo.TreeConstruction import DistanceCalculator, DistanceTreeConstructor
 from Bio.Phylo import PhyloXML
 from Bio.Phylo.Applications import PhymlCommandline
+from matplotlib import pyplot as plt
 
 
 #Contact address
@@ -80,7 +81,7 @@ def muscle_alignment(infile, outfile):
 def NJ_tree(infile, file_type):
     #Tree creation with neighbor-joining
     #input : infile = .fasta alignment file that the user can import or paste, file_type = clustal if the clustal too has been used, fasta if muscle tool has been used
-    #output : .png picture (not done yet) to display
+    #output : .png picture to display
     #phylogeny page should allow to choose neighbor-joining method
 
     filename = "../../data/sauvegardes/" + infile
@@ -92,13 +93,14 @@ def NJ_tree(infile, file_type):
     #display a tree on terminal
     #Phylo.draw_ascii(tree)
     tree.ladderize()
-    Phylo.draw(tree)
+    Phylo.draw(tree, do_show=False)
+    plt.savefig('../../data/images/NJ_tree.png')
 
 
 def ML_tree(infile, outfile, file_type):
     #Tree creation with maximum-likelihood algorithm (phyML)
     #input : infile = .fasta alignment file that the user can import or paste, outfile = name of output file, file_type = clustal is the clustal too has been used, fasta if muscle tool has been used
-    #output : .newick file and .png picture (not done yet) to display
+    #output : .newick file and .png picture to display
     #phylogeny page should allow to choose maximum lieklihood method
 
     #convert file to phylip
@@ -115,7 +117,8 @@ def ML_tree(infile, outfile, file_type):
     
     out_log, err_log = cmd()
     tree = Phylo.read('../../data/sauvegardes/' + outfile + '.phylip_phyml_tree.txt', 'newick')
-    Phylo.draw(tree)
+    Phylo.draw(tree, do_show=False)
+    plt.savefig('../../data/images/ML_tree.png')
 
 
 
