@@ -16,8 +16,7 @@ user_OS = sys.platform
 
 #list of genes
 id_list_1 = ["MT298507.1", "HQ954792.1", "MK013995.1","KJ128666.1","JX218056.1","KP403684.1","HQ536294.1","MK013988.1"]
-id_list_2 = [] #to fill
-
+id_list_2 = ["AY158636.1","AY158639.1","AY159811.1","AY159808.1","AY159809.1","AY158637.1","AY159810.1"]
 
 def get_fasta(id_list):
     #write a fasta file for each gene
@@ -85,9 +84,9 @@ def NJ_tree(infile, file_type):
     #phylogeny page should allow to choose neighbor-joining method
 
     filename = "../../data/sauvegardes/" + infile
-    aln = AlignIO.read(filename, file_type) #clustal si alignement clustal, fasta si alignement fasta
+    aln = AlignIO.read(filename, file_type) #clustal if clustal alignment, fasta if fasta alignment
     calculator = DistanceCalculator('identity')
-    constructor = DistanceTreeConstructor(calculator, 'nj') # nj ou UPGMA
+    constructor = DistanceTreeConstructor(calculator, 'nj') # nj or UPGMA
     tree = constructor.build_tree(aln)
     #print(tree)
     #display a tree on terminal
@@ -126,7 +125,7 @@ def ML_tree(infile, outfile, file_type):
 ############### MAIN ###############
 
 
-#get_fasta(id_list)
+#get_fasta(id_list_1)
 #clustal_alignment("multifasta.fasta","msa_clustal.fasta")
 #muscle_alignment("multifasta.fasta","msa_muscle.fasta")
 #NJ_tree("msa_muscle.fasta", 'fasta')
