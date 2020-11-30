@@ -1,0 +1,126 @@
+
+body{ background-color: black;
+    width: 767px;
+    margin-left: 20%;
+}
+
+.topMenu {
+    z-index:1;
+    width:100%;
+    height:10%;
+    background-color:#696479;
+    }
+
+.topMenu ul{
+    list-style-type:none;}
+
+li {
+    list-style-type:none;
+    float:left;
+    text-align:center;
+    background-color: transparent;
+    width: 32%;}
+    
+li.selected {
+    background-image:linear-gradient(darkred 20%,transparent);
+}
+
+a {
+    line-height:50px; 
+    color:#FFFFFF; 
+    text-decoration:none;}
+
+div.topMenu li:hover {
+        background-color:#E4E4E4;}
+        li:hover>a{ color:gray;}
+
+
+#img2{ 
+    position: absolute;
+    left:10%;
+    top:280px;}
+
+h2{
+    font-family:Georgia;
+    font-style: italic;
+    color:white;}
+
+.séquences{
+     width: 500px;
+     height: 200px;}
+
+#site_content {
+    background-image:linear-gradient(transparent 5%,gray 60%,transparent );  
+    min-height: 500px;  
+}
+
+h6{
+    position: absolute;
+    font-family:Georgia;
+    font-size: 1cm;
+    left: 475px;
+    top: 11px;}
+
+.Resultats{
+    width: 500px;
+    height: 300px;
+
+}
+
+.fichier{
+    position: absolute;
+    top: 330px;
+    left: 700px;}
+
+
+.copycoli{
+    position: absolute;
+    top: 375px ;
+    left: 700px;
+    width: 500px;
+    height: 200px;
+
+}
+
+.tele2{
+    position: absolute;
+    top: 600px;
+    left: 200px;
+}
+.cc{
+    position: absolute;
+    top: 336px;
+    left: 700px;
+}
+
+.phylogeny{
+    position: absolute;
+    top: 250px;
+    right: 50px;
+    width: 700px;
+    height: 400px;
+}
+
+
+#texte {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 96%;
+}
+
+#align {
+    margin-left: 5%;
+    width: 96%;
+    max-width: 95%;
+}
+
+#affiche {
+    text-align: center;
+    width: 96%;
+}
+
+#infos_generales {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+}

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<br></br>
+<br></br>
+<p></p>
+<div id="texte">
+    <p> Obtenir les séquences : </p>
+    <div class="container"><br>
+        <form role="form" method="post">
+            {% for geneid in idlist %}
+                <input type="checkbox" name="choixGene" id={{ geneid }} value={{ geneid }}>
+                <label for={{ geneid }}>{{ geneid }}</label><br>
+            {% endfor %}
+            <br></br>
+            <button type="submit" name="submit" value="submit">Télécharger</button>
+        </form>
+    </div>
+    <br></br>
+    <br></br>
+</div>
+
+{% endblock %}

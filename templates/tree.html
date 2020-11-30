@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div id ="affiche">
+    <br></br>
+    <br></br>
+    
+    <h3 class="tree">Affichage de l'arbre:</h3></p>
+    <br></br>
+  
+    <img src="{{ url_for('static', filename='figure/tree.png') }}?v2" id="img1", width="500", height="350">
+    </p>
+</div>
+
+{% endblock %}

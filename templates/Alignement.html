@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div id="align">
+
+    <a href="static/data/sauvegardes/multifasta.fasta">Fichier Fasta Download</a>
+    <h3> Effectuer l'alignement : </h3>
+    <form action="/Alignement" method="POST">
+        <td>Choisir une facon d'alignement :</td>
+
+                <select name="fAli" id="fAli">
+                    <option>clustal_alignment</option>
+                    <option>Muscle_alignement</option>
+
+                </select>
+
+{#        <td><input type="submit" value="Effectuer l'alignement" /></td>#}
+{#        <input type=image src="{{ url_for('static', filename='figure/Vipera.jpg') }}" onclick="submit(),window.location.href='{{ url_for("test") }}'">#}
+        
+<br></br>
+<td>Choisir une facon pour constuire l'arbre phylogénétique :</td>
+
+                <select name="tree" id="tree">
+                    <option>NJ_tree</option>
+                    <option>ML_tree</option>
+
+                </select>
+
+        <input type="submit" value="Faire l'arbre" />
+
+    </form>
+</div>
+
+{#          <input type="text" class="Resultats" />#}
+{#          <button type="button" class="tele2">Télécharger</button>#}
+{#          <button type="button" class="fichier">Charger un fichier</button>#}
+{#          <input type="text" class="copycoli" />#}
+{#          <h3 class="cc">Copier-coller des séquences</h3>#}
+
+{% endblock %}
+
