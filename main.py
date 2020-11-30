@@ -5,6 +5,8 @@ from Bio.Align.Applications import ClustalwCommandline, MuscleCommandline
 from Bio.Phylo.TreeConstruction import DistanceCalculator, DistanceTreeConstructor
 from Bio.Phylo import PhyloXML
 from Bio.Phylo.Applications import PhymlCommandline
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import os
 #Contact address
@@ -58,9 +60,9 @@ def muscle_alignment(infile, outfile):
     #create an alignment file with muscke
 
     if(user_OS == 'darwin'):
-        muscle_exe = "../../etc/tools/MacOS/muscle3.8.31_i86darwin64"
+        muscle_exe = "static/tools/MacOS/muscle3.8.31_i86darwin64"
     if(user_OS == 'linux'):
-        muscle_exe = "../../etc/tools/Linux/muscle3.8.31_i86linux64"
+        muscle_exe = "static/tools/Linux/muscle3.8.31_i86linux64"
     if(user_OS == 'win32'):
         muscle_exe = current_path + "/static/tools/Windows/muscle3.8.31_i86win32.exe"
 
@@ -97,11 +99,11 @@ def ML_tree(infile, outfile, file_type):
     print("Converted %i records" % count)
 
     if (user_OS == 'darwin'):
-        cmd = PhymlCommandline(cmd='../../etc/tools/MacOS/PhyML-3.1/PhyML-3.1_macOS-MountainLion',
-                               input='../../data/sauvegardes/' + outfile + '.phylip')
+        cmd = PhymlCommandline(cmd='static/tools/MacOS/PhyML-3.1/PhyML-3.1_macOS-MountainLion',
+                               input='static/data/sauvegardes/' + outfile + '.phylip')
     if (user_OS == 'linux'):
-        cmd = PhymlCommandline(cmd='../../etc/tools/Linux/PhyML-3.1/PhyML-3.1_linux64',
-                               input='../../data/sauvegardes/' + outfile + '.phylip')
+        cmd = PhymlCommandline(cmd='static/tools/Linux/PhyML-3.1/PhyML-3.1_linux64',
+                               input='static/data/sauvegardes/' + outfile + '.phylip')
     if (user_OS == 'win32'):
         cmd = PhymlCommandline(cmd= current_path + '/static/tools/Windows/PhyML-3.1/PhyML-3.1_win32.exe',
                                input='static/data/sauvegardes/' + outfile + '.phylip')
