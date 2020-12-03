@@ -46,7 +46,7 @@ def Alignement():
             type = 'fasta'
 
         if request.form["tree"] == "NJ_tree":
-            main.NJ_tree(main.dirName + "obtenu.fasta", type)
+            main.NJ_tree("obtenu.fasta", type)
             # return render_template('NJ_tree.html', selectedMenu="tree")
         elif request.form["tree"] == "ML_tree":
             main.ML_tree("obtenu.fasta", "msa_muscle", type)
