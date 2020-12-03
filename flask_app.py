@@ -28,7 +28,7 @@ def choixGene():
             id_list = request.form.getlist('choixGene')
             main.get_fasta(id_list)
 
-    return render_template('Alignement.html')
+    return render_template('Alignement.html', main.dirName=res)
 
 # @app.route('/Alignement')
 # def Alignement():
@@ -51,7 +51,7 @@ def Alignement():
         elif request.form["tree"] == "ML_tree":
             main.ML_tree("obtenu.fasta", "msa_muscle", type)
 
-        return render_template('tree.html')
+        return render_template('tree.html', main.dirName=res)
         # if request.form["fAli"] == "clustal_alignment":
         #         main.clustal_alignment("multifasta.fasta","msa_clustal.fasta")
         #         main.NJ_tree("msa_clustal.fasta", 'clustal')
