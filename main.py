@@ -122,6 +122,8 @@ def ML_tree(infile, outfile, file_type):
     plt.savefig(foo)
 
 dirName = get_random_string(10) + "/"
+saveDir = "static/data/sauvegardes/"
+os.makedirs(saveDir + dirName, exist_ok=True)
 
 # get_fasta(id_list)
 # clustal_alignment("multifasta.fasta","msa_clustal.fasta")
