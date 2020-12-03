@@ -126,8 +126,8 @@ saveDir = "static/data/sauvegardes/"
 os.makedirs(saveDir + dirName, exist_ok=True)
 os.makedirs("static/figure/" + dirName, exist_ok=True)
 
-get_fasta(id_list)
-clustal_alignment("multifasta.fasta","msa_clustal.fasta")
-muscle_alignment("multifasta.fasta","msa_muscle.fasta")
-NJ_tree("msa_clustal.fasta", "clustal")
-ML_tree("msa_clustal.fasta", "msa_muscle", "clustal")
+#get_fasta(id_list)
+#clustal_alignment("multifasta.fasta","msa_clustal.fasta")
+#muscle_alignment("multifasta.fasta","msa_muscle.fasta")
+#NJ_tree("msa_clustal.fasta", "clustal")
+#ML_tree("msa_clustal.fasta", "msa_muscle", "clustal")

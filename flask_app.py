@@ -39,17 +39,17 @@ def choixGene():
 def Alignement():
     if request.method == "POST":
         if request.form["fAli"] == "clustal_alignment":
-            main.clustal_alignment(main.dirName + "multifasta.fasta", main.dirName + "obtenu.fasta")
+            main.clustal_alignment("multifasta.fasta", "obtenu.fasta")
             type = 'clustal'
         elif request.form["fAli"] == "Muscle_alignement":
-            main.muscle_alignment(main.dirName + "multifasta.fasta", main.dirName + "obtenu.fasta")
+            main.muscle_alignment("multifasta.fasta", "obtenu.fasta")
             type = 'fasta'
 
         if request.form["tree"] == "NJ_tree":
             main.NJ_tree(main.dirName + "obtenu.fasta", type)
             # return render_template('NJ_tree.html', selectedMenu="tree")
         elif request.form["tree"] == "ML_tree":
-            main.ML_tree(main.dirName + "obtenu.fasta", main.dirName + "msa_muscle", type)
+            main.ML_tree("obtenu.fasta", "msa_muscle", type)
         res=main.dirName
         return render_template('tree.html', res=res)
  
