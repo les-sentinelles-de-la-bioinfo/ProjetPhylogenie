@@ -39,40 +39,20 @@ def choixGene():
 def Alignement():
     if request.method == "POST":
         if request.form["fAli"] == "clustal_alignment":
-            main.clustal_alignment("multifasta.fasta", "obtenu.fasta")
+            main.clustal_alignment(main.dirName + "multifasta.fasta", main.dirName + "obtenu.fasta")
             type = 'clustal'
         elif request.form["fAli"] == "Muscle_alignement":
-            main.muscle_alignment("multifasta.fasta", "obtenu.fasta")
+            main.muscle_alignment(main.dirName + "multifasta.fasta", main.dirName + "obtenu.fasta")
             type = 'fasta'
 
         if request.form["tree"] == "NJ_tree":
-            main.NJ_tree("obtenu.fasta", type)
+            main.NJ_tree(main.dirName + "obtenu.fasta", type)
             # return render_template('NJ_tree.html', selectedMenu="tree")
         elif request.form["tree"] == "ML_tree":
-            main.ML_tree("obtenu.fasta", "msa_muscle", type)
+            main.ML_tree(main.dirName + "obtenu.fasta", main.dirName + "msa_muscle", type)
         res=main.dirName
         return render_template('tree.html', res=res)
-        # if request.form["fAli"] == "clustal_alignment":
-        #         main.clustal_alignment("multifasta.fasta","msa_clustal.fasta")
-        #         main.NJ_tree("msa_clustal.fasta", 'clustal')
-        #         return render_template('NJ_tree.html', selectedMenu="tree")
-        #
-        # elif request.form["fAli"] == "clustal_alignment":
-        #         main.clustal_alignment("multifasta.fasta","msa_clustal.fasta")
-        #         main.ML_tree("msa_clustal.fasta", "msa_muscle", 'clustal')
-        #         return render_template('ML_tree.html', selectedMenu="tree")
-
-        # elif request.form["fAli"] == "Muscle_alignement":
-        #     if request.form["tree"] == "NJ_tree":
-        #         main.muscle_alignment("multifasta.fasta","msa_muscle.fasta")
-        #         main.NJ_tree("msa_muscle.fasta", 'fasta')
-        #         return render_template('NJ_tree.html', selectedMenu="tree")
-        #
-        # elif request.form["fAli"] == "Muscle_alignement":
-        #     if request.form["tree"] == "ML_tree":
-        #         main.muscle_alignment("multifasta.fasta","msa_muscle.fasta")
-        #         main.ML_tree("msa_muscle.fasta", "msa_muscle", 'fasta')
-        #         return render_template('ML_tree.html', selectedMenu="tree")
+ 
 
 if __name__ == '__main__':
     app.debug = True
