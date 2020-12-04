@@ -2,11 +2,69 @@
 
 {% block content %}
 
-<p><h2>hahahahaha</h2></p>
-   <!-- <img src="{{ url_for('static', filename='figure/Vipera.jpg') }}" id = "img2", width="500", height="350">
-    <h2>Vipera berus, la vipère péliade représentée dans la figure 1.11, 
-        est une espèce de serpent venimeux dela famille desViperidae. 
-        Son habitat se trouve en Europe et en Asie, dans les zones humides,
-        les tourbièreset les forêts. Selon la zone dans laquelle se trouve l’individu, la coloration varie du gris, bleu-gris, marron,vert-brun au noir</h2>
-->
+<section id ="text_accueil" >
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<center><a href="#a_propos"><i>À propos &emsp; </i></a>  <a href="#qpt"><i> &emsp;Que peut-on faire ? &emsp;</i></a></center>
+<div class="textes_accueil">
+   <p><center><i>"Les sentinelles de la bioinfo”</i> est une plateforme regroupant plusieurs outils bio-informatiques 
+    s'inspirant des nouvelles générations de séquençage et des différentes méthodes de phylogénie. Cette plateformes
+    se spécialise tout particulièrement sur l'une des espèces de serpent les plus connues : <i>Vipéra Berus Berus. </i></center> </p>
+    <br></br>
+    <h2 id="a_propos"><center>À propos ...</center> </h2>
+    <div id="partie1"> Ce projet s’inspire du programme 
+        <a href="https://www.sentinelles-climat.org/"" title="Senti" target="_blank">“Les sentinelles du climat”</a> 
+        porté en Nouvelle Aquitaine où est particulièrement 
+        impactée par le réchauffement climatique. En effet, l’augmentation des températures pourrait avoir des effets 
+        catastrophiques sur l’adaptation, le développement et la survie des espèces qui y vivent. Ainsi, ce programme 
+        a pour but l’étude des changements climatiques et de la biodiversité dans différents milieux en utilisant des 
+        espèces appelées les sentinelles du climats qui vivent dans chaque milieu afin d’évaluter l’impact des changements
+         climatiques sur la faune et la flore. Six espèces ont été identifiées comme sentinelles du climat dans les zones 
+         humides: la vipère péliade, la libellule, la rainette ibérique et rainette verte, l’azurée des mouillères et le 
+         lézard vivipare.  </div>
+    <div id="partie2">
+        Ce projet s’inclut dans ce contexte de recherche et propose d’étudier la vipère péliade (<i>Vipera Berus Berus</i>)
+        tout offrant accès à certains outils bio-informatiques permettant une étude phylogénétique de celle-ci.    
+        <br></br>
+        Le projet <b>“Les sentinelles de la Bioinfos”</b> a été mis en œuvre en octobre 2020 par un groupe de 7 étudiants du Master 2 
+        de Bioinformatique de l'<b>Université de Bordeaux</b>, France. Pour toutes questions ou suggestions pour ce projet,
+        veuillez nous contacter via l'adresse e-mails suivante:
+        
+    </div>
+</div>
+
+<center><u><a href="#text_accueil"> <img src="{{ url_for('static', filename='figure/fleche.png') }}" id = "fleche", width="3%", height="3%">    
+    Remonter la page      <img src="{{ url_for('static', filename='figure/fleche.png') }}" id = "fleche", width="3%", height="3%">  
+</a></u></center>
+
+<br></br>
+
+<h2 id="qpt"><center>Que peut-on faire ? </center> </h2>
+
+<br></br>
+
+<div class="textes_accueil">
+
+    <div id="partie1"> Cette plateforme permet d’effectuer une étude phylogénétique en passant de la récupération de séquences,
+        à l’alignement pour finalement amener à l’obtention d’un arbre phylogénétique. Une liste de gène d’intérêt est
+        proposée dans l’onglet <i>« BDD »</i>, ces séquences sont extraites de GenBank  qui est une banque généraliste de 
+        <a href="https://www.ncbi.nlm.nih.gov/"" title="NCBI" target="_blank"></a><i>NCBI</i></a>
+        <i>(National Center for Biotechnology Information)</i>. Vous pourrez ensuite effectuer une alignement multiple avec Muscle
+        ou Clustal.  La dernière étape consiste à construire un arbre de sous-espèces. Deux programmes sont intégrés dans
+        l'interface: <i>PhyML</i> et <i>SILVA</i>.</div>
+    <div id="partie2"><h4>User Guide :</h4>
+        (lister les étapes d'utilisation du site)
+        
+    </div>
+</div>
+
+<center><u><a href="#text_accueil"> <img src="{{ url_for('static', filename='figure/fleche.png') }}" id = "fleche", width="3%", height="3%">    
+    Remonter la page      <img src="{{ url_for('static', filename='figure/fleche.png') }}" id = "fleche", width="3%", height="3%">  
+</a></u></center>
+
+</section>
+</div>
+
 {% endblock %}
