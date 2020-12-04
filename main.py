@@ -21,8 +21,7 @@ current_path = os.path.dirname(__file__)
 parent_path = os.path.dirname(current_path)
 
 # list of genes
-id_list = ["MT298507.1", "HQ954792.1", "MK013995.1", "KJ128666.1", "JX218056.1", "KP403684.1", "HQ536294.1",
-           "MK013988.1"]
+id_list = ["AY158636.1","AY158639.1","AY159811.1","AY159808.1","AY159809.1","AY158637.1","AY159810.1"]
 
 def get_random_string(length):
     """Générer une chaîne aléatoire de longueur fixe"""
