@@ -19,7 +19,7 @@ li {
     float:left;
     text-align:center;
     background-color: transparent;
-    width: 32%;}
+    width: 20%;}
     
 li.selected {
     background-image:linear-gradient(darkred 20%,transparent);
@@ -34,16 +34,16 @@ div.topMenu li:hover {
         background-color:#E4E4E4;}
         li:hover>a{ color:gray;}
 
-
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    color: antiquewhite;
+}
 #img2{ 
     position: absolute;
     left:10%;
     top:280px;}
 
-h2{
-    font-family:Georgia;
-    font-style: italic;
-    color:white;}
 
 .séquences{
      width: 500px;
@@ -51,7 +51,14 @@ h2{
 
 #site_content {
     background-image:linear-gradient(transparent 5%,gray 60%,transparent );  
-    min-height: 500px;  
+    padding-bottom: 20px;
+
+}
+
+
+p {
+ text-align: justify;   
+ color: bisque;
 }
 
 h6{
@@ -87,18 +94,11 @@ h6{
     top: 600px;
     left: 200px;
 }
+
 .cc{
     position: absolute;
     top: 336px;
     left: 700px;
-}
-
-.phylogeny{
-    position: absolute;
-    top: 250px;
-    right: 50px;
-    width: 700px;
-    height: 400px;
 }
 
 
@@ -123,4 +123,35 @@ h6{
     margin-left: 5%;
     margin-right: 5%;
     text-align: justify;
+}
+
+#text_accueil {
+    margin-left: 7%;
+    margin-right: 7%;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #E4E4E4;
+    overflow-y:visible;
+}
+
+.textes_accueil {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+    
+#partie1 {
+    
+    width: 50%;
+    float: left;
+    margin-top: 2px;
+}
+
+#partie2{
+    margin-top: 5%;
+    margin-left: 55%;
+}
+
+#fleche {
+    margin-left: 10px;
+    margin-right: 10px;
 }
