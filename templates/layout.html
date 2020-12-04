@@ -24,16 +24,16 @@
                 <a href="/">Accueil</a></li>
                 
             <li {% if selectedMenu=="Infos" %} class="selected" {% endif %}>
-            <a href="/infos">Informations générales</a></li>
+            <a href="/infos">Infos générales</a></li>
     
             <li {% if selectedMenu=="Base de données" %} class="selected" {% endif %}>
-                <a href="/bdd">Base de données</a></li>
+                <a href="/bdd">Séquences</a></li>
 
-{#            <li {% if selectedMenu=="Alignement" %} class="selected" {% endif %}>#}
-{#                <a href="/Alignement">Alignement</a></li>#}
+           <li {% if selectedMenu=="Alignement" %} class="selected" {% endif %}>
+                <a href="/Alignement">Alignement</a></li>
 {##}
-{#            <li {% if selectedMenu=="Phylogénie" %} class="selected" {% endif %}>#}
-{#                <a href="/tree">Phylogénie</a></li>#}
+            <li {% if selectedMenu=="Phylogénie" %} class="selected" {% endif %}>
+                <a href="/tree">Phylogénie</a></li>
         </ul>
     </div>
     </div>
