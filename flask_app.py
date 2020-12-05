@@ -18,7 +18,8 @@ def infos_caract():
 @app.route('/bdd')
 def geneId():
     res = main.id_list
-    return render_template('bdd.html', idlist=res, selectedMenu="Base de données")
+    names = main.name_gene
+    return render_template('bdd.html', idlist=res, namegene=names, selectedMenu="Base de données")
 
 
 @app.route('/bdd',methods=['GET','POST'])
