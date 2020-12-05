@@ -5,12 +5,23 @@
 <div id ="affiche">
     <br></br>
     <br></br>
+    <p id="download"> Récupérer le fichier d'alignement généré précédemment : <br>
+        <a href="static/data/sauvegardes/{{res}}obtenu.fasta"><button type="button"> Alignement Download</button></a>
+    </p>
+    <br></br>
     
     <h3 class="tree">Affichage de l'arbre:</h3></p>
     <br></br>
   
     <img src="{{ url_for('static', filename='figure/'+res+'tree.png') }}?v2" id="img1", width="500", height="350">
-    </p>
+    
+</p>
+<br></br>
+<br></br>
+<center><p id="download"> Récupérer l'arbre généré : <br>
+    <a href="static/figure/{{res}}tree.png"><button type="button"> Alignement Download</button></a>
+</p>
+</center>
 </div>
 
 {% endblock %}

@@ -3,29 +3,41 @@
 {% block content %}
 
 <div id="align">
+<p id="download"> Récupérer le fichier généré précédemment : <br>
+    <a href="static/data/sauvegardes/{{res}}multifasta.fasta"><button type="button"> Fasta Download</button></a>
+</p>
+<br></br>
 
-    <a href="static/data/sauvegardes/{{res}}multifasta.fasta">Fichier Fasta Download</a>
-    <h3> Effectuer l'alignement : </h3>
+    <center><h3> Effectuer l'alignement : </h3></center>
     <form action="/Alignement" method="POST">
-        <td>Choisir une facon d'alignement :</td>
+        <td><b>&emsp;&emsp;&emsp;&emsp;1.</b> Choisir une méthode d'alignement :</td> <br>
+        <br></br>
 
-                <select name="fAli" id="fAli">
+               <center> <select name="fAli" id="fAli">
                     <option>clustal_alignment</option>
                     <option>Muscle_alignement</option>
 
                 </select>
-        
+                 </center>
 <br></br>
-<td>Choisir une facon pour constuire l'arbre phylogénétique :</td>
+<br></br>
 
+<td>&emsp;&emsp;<b>&emsp;&emsp;2.</b> Choisir une méthode pour constuire l'arbre phylogénétique :</td>
+<br></br>
+
+<center>
                 <select name="tree" id="tree">
                     <option>NJ_tree</option>
                     <option>ML_tree</option>
 
                 </select>
+            
+            <br></br>
+            <br></br>
 
-        <input type="submit" value="Faire l'arbre" />
 
+            <br><input type="submit" value="Faire l'arbre" />
+        </center>
     </form>
 </div>
 
