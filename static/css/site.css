@@ -2,6 +2,8 @@
 body{ background-color: black;
     width: 767px;
     margin-left: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #E4E4E4;
 }
 
 .topMenu {
@@ -55,7 +57,6 @@ h2 {
 
 }
 
-
 p {
  text-align: justify;   
  color: bisque;
@@ -106,26 +107,38 @@ h6{
     margin-left: 10%;
     margin-right: 10%;
     width: 96%;
+    color: #E4E4E4;
 }
 
 #align {
+    padding-top: 70px;
     margin-left: 5%;
     width: 96%;
     max-width: 95%;
+    padding-bottom: 70px;
 }
 
 #affiche {
     text-align: center;
     width: 96%;
+    padding-top: 70px;
+    margin-left: 5%;
+    width: 96%;
+    max-width: 95%;
+    padding-bottom: 70px;
 }
 
 #infos_generales {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 7%;
+    margin-right: 7%;
     text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #E4E4E4;
+    overflow-y:visible;
+    margin-bottom: 50px;
 }
 
-#text_accueil {
+#text_accueil{
     margin-left: 7%;
     margin-right: 7%;
     text-align: justify;
@@ -149,9 +162,4 @@ h6{
 #partie2{
     margin-top: 5%;
     margin-left: 55%;
-}
-
-#fleche {
-    margin-left: 10px;
-    margin-right: 10px;
 }
