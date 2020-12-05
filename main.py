@@ -22,6 +22,7 @@ parent_path = os.path.dirname(current_path)
 
 # list of genes
 id_list = ["AY158636.1","AY158639.1","AY159811.1","AY159808.1","AY159809.1","AY158637.1","AY159810.1"]
+name_gene = ["Vipera berus Pla2Vb", "Vipera berus AmtI2", "Vipera berus AmtI1", "Vipera aspis AmtI1", "Vipera aspis AmtI1", "Vipera aspis (AmtI2)", "Vipera aspis zinnikeri AmtI1"]
 
 def get_random_string(length):
     """Générer une chaîne aléatoire de longueur fixe"""
