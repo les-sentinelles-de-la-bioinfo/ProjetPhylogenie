@@ -11,18 +11,6 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import os
-#Contact address
-Entrez.email = "sentinelles.bioinfo@gmail.com"
-
-# #Define user's operating system
-user_OS = sys.platform
-
-current_path = os.path.dirname(__file__)
-parent_path = os.path.dirname(current_path)
-
-# list of genes
-id_list = ["AY158636.1","AY158639.1","AY159811.1","AY159808.1","AY159809.1","AY158637.1","AY159810.1"]
-name_gene = ["Vipera berus Pla2Vb", "Vipera berus AmtI2", "Vipera berus AmtI1", "Vipera aspis AmtI1", "Vipera aspis AmtI1", "Vipera aspis (AmtI2)", "Vipera aspis zinnikeri AmtI1"]
 
 def get_random_string(length):
     """Générer une chaîne aléatoire de longueur fixe"""
@@ -51,7 +39,6 @@ def get_fasta(id_list):
 
 def clustal_alignment(infile, outfile):
     # create an alignment file with clustal omega
-
     if (user_OS == 'darwin'):
         clustal_exe = "static/tools/MacOS/clustal-omega-1.2.3-macosx"
     if (user_OS == 'linux'):
@@ -65,7 +52,6 @@ def clustal_alignment(infile, outfile):
 
 def muscle_alignment(infile, outfile):
     #create an alignment file with muscke
-
     if(user_OS == 'darwin'):
         muscle_exe = "static/tools/MacOS/muscle3.8.31_i86darwin64"
     if(user_OS == 'linux'):
@@ -121,11 +107,27 @@ def ML_tree(infile, outfile, file_type):
     foo = current_path + '/static/figure/' + dirName + 'tree.png'
     plt.savefig(foo)
 
+##################################### MAIN ##############################################################
+#Contact address
+Entrez.email = "sentinelles.bioinfo@gmail.com"
+
+# Define user's operating system
+user_OS = sys.platform
+
+current_path = os.path.dirname(__file__)
+parent_path = os.path.dirname(current_path)
+
+# list of genes
+id_list = ["AY158636.1","AY158639.1","AY159811.1","AY159808.1","AY159809.1","AY158637.1","AY159810.1"]
+name_gene = ["Vipera berus Pla2Vb", "Vipera berus AmtI2", "Vipera berus AmtI1", "Vipera aspis AmtI1", "Vipera aspis AmtI1", "Vipera aspis (AmtI2)", "Vipera aspis zinnikeri AmtI1"]
+
+# Create a random name for each user session and create corresponding directories in order to allow multiple simultaneous uses without loss of data
 dirName = get_random_string(10) + "/"
 saveDir = "static/data/sauvegardes/"
 os.makedirs(saveDir + dirName, exist_ok=True)
 os.makedirs("static/figure/" + dirName, exist_ok=True)
 
+## Function calls to use the program in the terminal without the user interface
 #get_fasta(id_list)
 #clustal_alignment("multifasta.fasta","msa_clustal.fasta")
 #muscle_alignment("multifasta.fasta","msa_muscle.fasta")
