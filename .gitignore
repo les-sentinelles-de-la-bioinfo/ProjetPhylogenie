@@ -15,6 +15,4 @@ build/
 .vscode
 .DS_Store
 sauvegardes/
-tree.png
-figure/
 env/
