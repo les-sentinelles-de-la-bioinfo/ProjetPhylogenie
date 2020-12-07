@@ -27,7 +27,7 @@ def choixGene():
     if request.method == "POST":
         if request.form["submit"] == 'submit':
             id_list = request.form.getlist('choixGene')
-            main.get_fasta(id_list)
+            main.dirName = main.get_fasta(id_list)
     res=main.dirName
     return render_template('Alignement.html', res=res, selectedMenu="Alignement")
 
