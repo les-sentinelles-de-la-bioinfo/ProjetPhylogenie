@@ -1,15 +1,21 @@
+<!-- DENET Lola, DESQUERRE Émilie, HUI Tongyuxuan, MEGUERDITCHIAN Caroline, NIU Wenli, PRATX Julie, VU Thao Uyen-->
+
 {% extends "layout.html" %}
 
 {% block content %}
 <br></br>
 <br></br>
 <p></p>
-<div id="texte">
+<div id="text">
     <br></br>
     <p style="font-size: small; width: 80%;"><justify><i>Les gènes proposés ci-dessous ont tous été 
     récupérés sur la GenBank de NCBI et sont accessibles via leurs numéros d'accession.
     Tous ces gènes sont en rapport avec le venin de la vipère péliade et d'autres espèces de serpents.
-    Ils ont été sélectionnés pour l'intérêt biologique qui pourrait découler de leur étude.</p>
+    Ils ont été sélectionnés pour l'intérêt biologique qui pourrait découler de leur étude.
+    <br></br>
+</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<huge>/!\ Cela peut prendre quelques minutes /!\</huge></p>
+
     <br></br>
     <p> Obtenir les séquences : </i> </justify></p>
 
@@ -20,7 +26,7 @@
                 <label for={{ geneid }}>{{ geneid }} </label> - <label for={{ namegene }}>{{ namegene[loop.index-1] }}</label><br>
             {% endfor %}
                 <br></br>
-            <button type="submit" name="submit" value="submit">Télécharger</button>
+            <button type="submit" name="submit" value="submit">Sélectionner</button>
         </form>
     </div>
     <br></br>

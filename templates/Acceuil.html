@@ -1,20 +1,22 @@
+<!-- DENET Lola, DESQUERRE Émilie, HUI Tongyuxuan, MEGUERDITCHIAN Caroline, NIU Wenli, PRATX Julie, VU Thao Uyen-->
+
 {% extends "layout.html" %}
 
 {% block content %}
 
-<section id ="text_accueil" >
+<section id ="text_home" >
 <br></br>
 <br></br>
 <br></br>
 <br></br>
 <center><a href="#a_propos"><i>À propos &emsp; </i></a>  <a href="#qpt"><i> &emsp;Que peut-on faire ? &emsp;</i></a></center>
-<div class="textes_accueil">
+<div class="texts_home">
    <p><center><i>"Les sentinelles de la bioinfo”</i> est une plateforme regroupant plusieurs outils bio-informatiques 
     s'inspirant des nouvelles générations de séquençage et des différentes méthodes de phylogénie. Cette plateformes
     se spécialise tout particulièrement sur l'une des espèces de serpent les plus connues : <i>Vipéra Berus Berus. </i></center> </p>
     <br></br>
     <h2 id="a_propos"><center>À propos ...</center> </h2>
-    <div id="partie1"> Ce projet s’inspire du programme 
+    <div id="part1"> Ce projet s’inspire du programme 
         <a href="https://www.sentinelles-climat.org/"" title="Senti" target="_blank">“Les sentinelles du climat”</a> 
         porté en Nouvelle Aquitaine où est particulièrement 
         impactée par le réchauffement climatique. En effet, l’augmentation des températures pourrait avoir des effets 
@@ -24,7 +26,7 @@
          climatiques sur la faune et la flore. Six espèces ont été identifiées comme sentinelles du climat dans les zones 
          humides: la vipère péliade, la libellule, la rainette ibérique et rainette verte, l’azurée des mouillères et le 
          lézard vivipare.  </div>
-    <div id="partie2">
+    <div id="part2">
         Ce projet s’inclut dans ce contexte de recherche et propose d’étudier la vipère péliade (<i>Vipera Berus Berus</i>)
         tout offrant accès à certains outils bio-informatiques permettant une étude phylogénétique de celle-ci.    
         <br></br>
@@ -35,7 +37,7 @@
     </div>
 </div>
 
-<center><u><a href="#text_accueil"> <img src="{{ url_for('static', filename='figure/fleche.png') }}" id = "fleche", width="3%", height="3%">    
+<center><u><a href="#text_home"> <img src="{{ url_for('static', filename='figure/fleche.png') }}" id = "fleche", width="3%", height="3%">    
     Remonter la page      <img src="{{ url_for('static', filename='figure/fleche.png') }}" id = "fleche", width="3%", height="3%">  
 </a></u></center>
 
@@ -45,22 +47,22 @@
 
 <br></br>
 
-<div class="textes_accueil">
+<div class="texts_home">
 
-    <div id="partie1"> Cette plateforme permet d’effectuer une étude phylogénétique en passant de la récupération de séquences,
+    <div id="part1"> Cette plateforme permet d’effectuer une étude phylogénétique en passant de la récupération de séquences,
         à l’alignement pour finalement amener à l’obtention d’un arbre phylogénétique. Une liste de gène d’intérêt est
         proposée dans l’onglet <i>« BDD »</i>, ces séquences sont extraites de GenBank  qui est une banque généraliste de 
         <a href="https://www.ncbi.nlm.nih.gov/"" title="NCBI" target="_blank"></a><i>NCBI</i></a>
         <i>(National Center for Biotechnology Information)</i>. Vous pourrez ensuite effectuer une alignement multiple avec Muscle
         ou Clustal.  La dernière étape consiste à construire un arbre de sous-espèces. Deux programmes sont intégrés dans
         l'interface: <i>PhyML</i> et <i>SILVA</i>.</div>
-    <div id="partie2"><h4>User Guide :</h4>
+    <div id="part2"><h4>User Guide :</h4>
         (lister les étapes d'utilisation du site)
         
     </div>
 </div>
 
-<center><u><a href="#text_accueil"> <img src="{{ url_for('static', filename='figure/fleche.png') }}" id = "fleche", width="3%", height="3%">    
+<center><u><a href="#text_home"> <img src="{{ url_for('static', filename='figure/fleche.png') }}" id = "fleche", width="3%", height="3%">    
     Remonter la page      <img src="{{ url_for('static', filename='figure/fleche.png') }}" id = "fleche", width="3%", height="3%">  
 </a></u></center>
 
