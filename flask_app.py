@@ -19,7 +19,7 @@ def infos_caract():
 def geneId():
     res = main.id_list
     names = main.name_gene
-    return render_template('bdd.html', idlist=res, namegene=names, selectedMenu="Base de données")
+    return render_template('bdd.html', idlist=res,namegene=names, selectedMenu="Base de données")
 
 
 @app.route('/bdd',methods=['GET','POST'])
@@ -29,7 +29,7 @@ def choixGene():
             id_list = request.form.getlist('choixGene')
             main.get_fasta(id_list)
     res=main.dirName
-    return render_template('Alignement.html', res=res)
+    return render_template('Alignement.html', res=res, selectedMenu="Alignement")
 
 # @app.route('/Alignement')
 # def Alignement():
@@ -52,7 +52,7 @@ def Alignement():
         elif request.form["tree"] == "ML_tree":
             main.ML_tree("obtenu.fasta", "msa_muscle", type)
         res=main.dirName
-        return render_template('tree.html', res=res)
+        return render_template('tree.html', res=res, selectedMenu="Phylogénie")
  
 
 if __name__ == '__main__':
