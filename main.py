@@ -18,6 +18,9 @@ def get_random_string(length):
     return ''.join(random.choice(str) for i in range(length))
 
 def get_fasta(id_list):
+    dirName = get_random_string(10) + "/"
+    saveDir = "static/data/sauvegardes/"
+    os.makedirs(saveDir + dirName, exist_ok=True)
     # write a fasta file for each gene
     filename_list = []
     for gene_id in id_list:
@@ -35,9 +38,6 @@ def get_fasta(id_list):
         for fname in filename_list:
             with open(fname) as infile:
                 outfile.write(infile.read())
-    dirName = get_random_string(10) + "/"
-    saveDir = "static/data/sauvegardes/"
-    os.makedirs(saveDir + dirName, exist_ok=True)
     return dirName
 
 def clustal_alignment(infile, outfile):
