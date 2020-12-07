@@ -31,11 +31,6 @@ def choixGene():
     res=main.dirName
     return render_template('Alignement.html', res=res, selectedMenu="Alignement")
 
-# @app.route('/Alignement')
-# def Alignement():
-#     return render_template('Alignement.html', selectedMenu="Alignement")
-
-
 @app.route('/Alignement', methods=['POST'])
 def Alignement():
     if request.method == "POST":
@@ -48,7 +43,6 @@ def Alignement():
 
         if request.form["tree"] == "Neighbor Joining":
             main.NJ_tree("obtenu.fasta", type)
-            # return render_template('NJ_tree.html', selectedMenu="tree")
         elif request.form["tree"] == "Maximum Likelihood":
             main.ML_tree("obtenu.fasta", "msa_muscle", type)
         res=main.dirName
