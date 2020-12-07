@@ -130,7 +130,7 @@ name_gene = ["Vipera berus Pla2Vb", "Vipera berus AmtI2", "Vipera berus AmtI1", 
 dirName=""
 
 ## Function calls to use the program in the terminal without the user interface
-#get_fasta(id_list)
+#dirName = get_fasta(id_list)
 #clustal_alignment("multifasta.fasta","msa_clustal.fasta")
 #muscle_alignment("multifasta.fasta","msa_muscle.fasta")
 #NJ_tree("msa_clustal.fasta", "clustal")
