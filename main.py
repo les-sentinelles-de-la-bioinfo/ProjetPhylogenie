@@ -35,7 +35,10 @@ def get_fasta(id_list):
         for fname in filename_list:
             with open(fname) as infile:
                 outfile.write(infile.read())
-
+    dirName = get_random_string(10) + "/"
+    saveDir = "static/data/sauvegardes/"
+    os.makedirs(saveDir + dirName, exist_ok=True)
+    return dirName
 
 def clustal_alignment(infile, outfile):
     # create an alignment file with clustal omega
@@ -124,10 +127,11 @@ id_list = ["AY158636.1","AY158639.1","AY159811.1","AY159808.1","AY159809.1","AY1
 name_gene = ["Vipera berus Pla2Vb", "Vipera berus AmtI2", "Vipera berus AmtI1", "Vipera aspis AmtI1", "Vipera aspis AmtI1", "Vipera aspis (AmtI2)", "Vipera aspis zinnikeri AmtI1"]
 
 # Create a random name for each user session and create corresponding directories in order to allow multiple simultaneous uses without loss of data
-dirName = get_random_string(10) + "/"
-saveDir = "static/data/sauvegardes/"
-os.makedirs(saveDir + dirName, exist_ok=True)
-os.makedirs("static/figure/" + dirName, exist_ok=True)
+#dirName = get_random_string(10) + "/"
+#saveDir = "static/data/sauvegardes/"
+#os.makedirs(saveDir + dirName, exist_ok=True)
+#os.makedirs("static/figure/" + dirName, exist_ok=True)
+dirName=""
 
 ## Function calls to use the program in the terminal without the user interface
 #get_fasta(id_list)
