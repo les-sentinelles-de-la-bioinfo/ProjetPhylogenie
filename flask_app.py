@@ -39,17 +39,17 @@ def choixGene():
 @app.route('/Alignement', methods=['POST'])
 def Alignement():
     if request.method == "POST":
-        if request.form["fAli"] == "clustal_alignment":
+        if request.form["fAli"] == "Clustal":
             main.clustal_alignment("multifasta.fasta", "obtenu.fasta")
             type = 'clustal'
-        elif request.form["fAli"] == "Muscle_alignement":
+        elif request.form["fAli"] == "Muscle":
             main.muscle_alignment("multifasta.fasta", "obtenu.fasta")
             type = 'fasta'
 
-        if request.form["tree"] == "NJ_tree":
+        if request.form["tree"] == "Neighbor Joining":
             main.NJ_tree("obtenu.fasta", type)
             # return render_template('NJ_tree.html', selectedMenu="tree")
-        elif request.form["tree"] == "ML_tree":
+        elif request.form["tree"] == "Maximum Likehood":
             main.ML_tree("obtenu.fasta", "msa_muscle", type)
         res=main.dirName
         return render_template('tree.html', res=res, selectedMenu="Phylogénie")
