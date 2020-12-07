@@ -81,7 +81,7 @@ def NJ_tree(infile, file_type):
     tree.ladderize()
     Phylo.draw(tree, do_show=False)
     Phylo.write(tree, 'static/data/sauvegardes/' + dirName + 'tree.txt', "newick")
-    foo = current_path + "/static/data/sauvegardes/" + dirName + 'tree.png'
+    foo = current_path + "static/data/sauvegardes/" + dirName + 'tree.png'
     plt.savefig(foo)
 
 
@@ -110,7 +110,7 @@ def ML_tree(infile, outfile, file_type):
     tree = Phylo.read('static/data/sauvegardes/' + dirName + outfile + '.phylip_phyml_tree.txt', 'newick')
     Phylo.draw(tree, do_show=False)
     Phylo.write(tree, 'static/data/sauvegardes/' + dirName + 'tree.txt', "newick")
-    foo = current_path + '/static/data/sauvegardes/' + dirName + 'tree.png'
+    foo = current_path + 'static/data/sauvegardes/' + dirName + 'tree.png'
     plt.savefig(foo)
 
 ##################################### MAIN ##############################################################
