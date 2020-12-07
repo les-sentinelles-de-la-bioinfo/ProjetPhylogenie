@@ -49,7 +49,7 @@ def Alignement():
         if request.form["tree"] == "Neighbor Joining":
             main.NJ_tree("obtenu.fasta", type)
             # return render_template('NJ_tree.html', selectedMenu="tree")
-        elif request.form["tree"] == "Maximum Likehood":
+        elif request.form["tree"] == "Maximum Likelihood":
             main.ML_tree("obtenu.fasta", "msa_muscle", type)
         res=main.dirName
         return render_template('tree.html', res=res, selectedMenu="Phylogénie")
