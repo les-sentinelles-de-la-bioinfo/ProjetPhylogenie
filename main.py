@@ -76,8 +76,8 @@ def NJ_tree(infile, file_type):
     #Phylo.draw_ascii(tree)
     tree.ladderize()
     Phylo.draw(tree, do_show=False)
-    Phylo.write(tree, 'NJ_tree.txt', "newick")
-    foo = current_path + '/static/figure/' + dirName + 'tree.png'
+    Phylo.write(tree, 'static/data/sauvegardes/' + dirName + 'tree.txt', "newick")
+    foo = current_path + "static/data/sauvegardes/" + dirName + 'tree.png'
     plt.savefig(foo)
 
 
@@ -85,7 +85,7 @@ def ML_tree(infile, outfile, file_type):
     # Tree creation with maximum-likelihood algorithm (phyML)
     # input : infile = .fasta alignment file that the user can import or paste, outfile = name of output file, file_type = clustal is the clustal too has been used, fasta if muscle tool has been used
     # output : .newick file and .png picture to display
-    # phylogeny page should allow to choose maximum lieklihood method
+    # phylogeny page should allow to choose maximum likelihood method
 
     # convert file to phylip
     records = SeqIO.parse("static/data/sauvegardes/" + dirName + infile, file_type)  # clustal <-> fasta
@@ -105,7 +105,8 @@ def ML_tree(infile, outfile, file_type):
     out_log, err_log = cmd()
     tree = Phylo.read('static/data/sauvegardes/' + dirName + outfile + '.phylip_phyml_tree.txt', 'newick')
     Phylo.draw(tree, do_show=False)
-    foo = current_path + '/static/figure/' + dirName + 'tree.png'
+    Phylo.write(tree, 'static/data/sauvegardes/' + dirName + 'tree.txt', "newick")
+    foo = current_path + 'static/data/sauvegardes/' + dirName + 'tree.png'
     plt.savefig(foo)
 
 ##################################### MAIN ##############################################################
