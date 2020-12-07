@@ -127,7 +127,7 @@ parent_path = os.path.dirname(current_path)
 id_list = ["AY158636.1","AY158639.1","AY159811.1","AY159808.1","AY159809.1","AY158637.1","AY159810.1"]
 name_gene = ["Vipera berus Pla2Vb", "Vipera berus AmtI2", "Vipera berus AmtI1", "Vipera aspis AmtI1", "Vipera aspis AmtI1", "Vipera aspis (AmtI2)", "Vipera aspis zinnikeri AmtI1"]
 
-dirName=""
+#dirName=""
 
 ## Function calls to use the program in the terminal without the user interface
 #get_fasta(id_list)
