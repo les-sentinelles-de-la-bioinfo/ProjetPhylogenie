@@ -76,6 +76,7 @@ def NJ_tree(infile, file_type):
     #Phylo.draw_ascii(tree)
     tree.ladderize()
     Phylo.draw(tree, do_show=False)
+    Phylo.write(tree, 'NJ_tree.txt', "newick")
     foo = current_path + '/static/figure/' + dirName + 'tree.png'
     plt.savefig(foo)
 
