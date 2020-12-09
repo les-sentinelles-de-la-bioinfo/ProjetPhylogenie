@@ -2,7 +2,6 @@ import sys
 import time
 import random
 import string
-import matplotlib.pyplot as plt
 import os
 from Bio import Entrez, AlignIO, SeqIO, Phylo
 from Bio.Align.Applications import ClustalwCommandline, MuscleCommandline
@@ -11,6 +10,7 @@ from Bio.Phylo import PhyloXML
 from Bio.Phylo.Applications import PhymlCommandline
 import matplotlib
 matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 
 
 
