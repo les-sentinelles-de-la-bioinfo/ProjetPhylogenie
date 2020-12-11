@@ -60,7 +60,7 @@ L'utilisateur peut :
 
 ![Zozor](https://zupimages.net/up/20/50/mayf.png)
 
-* Récupérer l'arbre généré en format netwick
+* Récupérer l'arbre généré en format newick
 
 ![Zozor](https://zupimages.net/up/20/50/aos8.png)
 
