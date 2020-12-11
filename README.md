@@ -39,6 +39,8 @@ Sur cette page, l'utilisateur peut choisir :
 
 ![Zozor](https://zupimages.net/up/20/50/juk3.png)
 
+3. pour générer l'arbre, l'utilisateur doit cliquer sur "Faire l'arbre"
+
 Mais il peut aussi télécharger un fichier fasta qui contient les séquences choisies précédemment.
 ![Zozor](https://zupimages.net/up/20/50/awud.png)
 
