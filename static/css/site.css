@@ -46,11 +46,6 @@ h2 {
     left:10%;
     top:280px;}
 
-
-.séquences{
-     width: 500px;
-     height: 200px;}
-
 #site_content {
     background-image:linear-gradient(transparent 5%,gray 60%,transparent );  
     padding-bottom: 20px;
@@ -68,39 +63,6 @@ h6{
     font-size: 1cm;
     left: 475px;
     top: 11px;}
-
-.Resultats{
-    width: 500px;
-    height: 300px;
-
-}
-
-.fichier{
-    position: absolute;
-    top: 330px;
-    left: 700px;}
-
-
-.copycoli{
-    position: absolute;
-    top: 375px ;
-    left: 700px;
-    width: 500px;
-    height: 200px;
-
-}
-
-.tele2{
-    position: absolute;
-    top: 600px;
-    left: 200px;
-}
-
-.cc{
-    position: absolute;
-    top: 336px;
-    left: 700px;
-}
 
 
 #text {
