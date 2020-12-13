@@ -2,7 +2,7 @@
 
 ## Sommaire :  <a id="sommaire"></a>
 
-[- Lancement sur serveur Flask](#flask)
+[- Installation et démarrage de Flask](#flask)
 
 
 ## Composition du site
