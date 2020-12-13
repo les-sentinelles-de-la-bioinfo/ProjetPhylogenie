@@ -77,7 +77,7 @@ L'utilisateur peut :
 
 1. Activer l'environnement virtuel
 
-`source env/bin/activate`
+`source venv/bin/activate`
 
 2. Installation de Flask
 
@@ -87,7 +87,7 @@ L'utilisateur peut :
 
 ```
 export FLASK_APP=flask_app.py
-export FLASK_ENV=env
+export FLASK_ENV=venv
 flask run
 ```
 
