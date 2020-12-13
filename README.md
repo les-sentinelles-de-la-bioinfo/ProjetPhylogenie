@@ -1,6 +1,6 @@
 # Guide Utilisateur
 
-Sommaire :
+## Sommaire :  <a id="sommaire"></a>
 
 
 [- Guide installation et de configuration de WAMP sur Windows](#guidewamp)
@@ -69,6 +69,10 @@ L'utilisateur peut :
 * Récupérer l'arbre généré en format newick
 
 ![Zozor](https://zupimages.net/up/20/50/aos8.png)
+
+-------------------------------------------
+
+[Retourner au sommaire](#sommaire)
 
 -------------------------------------------
 
@@ -181,6 +185,8 @@ Ajoutez un nouvel virtual host (1)
 
 ----------------------------
 
+[Retourner au sommaire](#sommaire)
+
 ----------------------------
 
 # Site Web sur serveur Apache Linux  <a id="guidelinux"></a>
@@ -277,3 +283,7 @@ Sauver et quitter
 `sudo service apache2 restart`
 
 Le site est maintenant accessible à l'adresse http://localhost/Phylogenie 
+
+----------------
+
+[Retourner au sommaire](#sommaire)
