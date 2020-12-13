@@ -1,5 +1,11 @@
 # Guide Utilisateur
 
+Sommaire :
+
+
+[- Guide installation et de configuration de WAMP sur Windows](#guidewamp)
+[- Guide installation et de configuration d'Apache sur Linux](#guidelinux)
+
 
 ## Composition du site
 Le site est composé de plusieurs pages dont chacune d'entre-elles a une fonction particulière.
@@ -65,7 +71,7 @@ L'utilisateur peut :
 
 -------------------------------------------
 
-# Site Web sur serveur local WAMP
+# Site Web sur serveur local WAMP  <a id="guidewamp"></a>
 ![Zozor](https://blog.nicolashachet.com/wp-content/uploads/2011/05/wamp.png)
 
 
@@ -176,7 +182,7 @@ Ajoutez un nouvel virtual host (1)
 
 ----------------------------
 
-# Site Web sur serveur Apache Linux
+# Site Web sur serveur Apache Linux  <a id="guidelinux"></a>
 
 Les fichiers sont à placer dans /var/www/html/
 
