@@ -6,7 +6,7 @@
 
 
 ## Composition du site
-Le site est composé de plusieurs pages dont chacune d'entre-elles a une fonction particulière.
+Le site (http://sentinellesbioinfo.pythonanywhere.com) est composé de plusieurs pages dont chacune d'entre-elles a une fonction particulière.
 
 ![Zozor](https://zupimages.net/up/20/50/ka5n.png)
 
@@ -73,25 +73,40 @@ L'utilisateur peut :
 
 -------------------------------------------
 
-# Lancement sur serveur Flask <a id="flask"></a>
+# Installation, configuration et démarrage du serveur Flask <a id="flask"></a>
 
-1. Activer l'environnement virtuel
+1. Installer Python 3
 
-`source venv/bin/activate`
+https://www.python.org/downloads/
 
-2. Installation de Flask
+2. Cloner le repository GitHub ou télécharger le `.zip`
 
-`pip install Flask`
+https://github.com/les-sentinelles-de-la-bioinfo/ProjetPhylogenie
 
-3. Démarrage de Flask
+3. Créer l'environnement virtuel dans le répertoire contenant `flask\_app.py`
+
+`python3 -m venv env`
+
+4. Activer l'environnement virtuel
+
+`source env/bin/activate`
+
+5. Installation de Flask et des modules/packages
+```
+pip3 install Flask
+pip3 install matplotlib
+pip3 install biopython
+```
+
+6. Démarrage de Flask
 
 ```
 export FLASK_APP=flask_app.py
-export FLASK_ENV=venv
+export FLASK_ENV=env
 flask run
 ```
 
-4. Le site est maintenant disponible à l'adresse suivante : http://127.0.0.1:5000
+7. L'interface utilisateur est maintenant disponible en local à l'adresse suivante : http://127.0.0.1:5000
 
 ----------------
 
