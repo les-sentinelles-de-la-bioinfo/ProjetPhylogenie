@@ -223,6 +223,18 @@ s`udo nano /etc/apache2/conf-available/mod-wsgi.conf`
 
 `sudo systemctl restart apache2`
 
+8. Créez un dossier wsgi_scripts et un fichier phylogenie.wsgi et ajoutez ces lignes de code
+
+```
+import sys 
+
+#Expand Python classes path with your app's path
+sys.path.insert(0, 'var/www/html/Phylogenie') 
+
+from flask_app import app as application
+
+```
+
 9. Configuration du virtualhost de Flask
 
 `sudo nano /etc/apache2/sites-available/FlaskApp.conf`
