@@ -1,3 +1,13 @@
+# Software engineering project
+# Authors : DENET Lola, DESQUERRE Émilie, HUI Tongyuxuan, MEGUERDITCHIAN Caroline, NIU Wenli, PRATX Julie, VU Thao Uyen
+# M2 Bioinformatics - Bordeaux university
+# December 14, 2020
+
+# main.py
+# Can be executed alone by uncommenting the function calls and modifying them according to the tools chosen.
+# It allows the tools to be used in "terminal" mode without flask and without user interface.
+# Functions are also used by flask_app.py for using tools from the user interface.
+
 import sys
 import time
 import random
@@ -13,7 +23,7 @@ import matplotlib.pyplot as plt
 import os
 
 def get_random_string(length):
-    """Générer une chaîne aléatoire de longueur fixe"""
+    # Generates a random string
     str = string.ascii_lowercase
     return ''.join(random.choice(str) for i in range(length))
 
@@ -55,7 +65,7 @@ def clustal_alignment(infile, outfile):
     stdout, stderr = cline()
 
 def muscle_alignment(infile, outfile):
-    #create an alignment file with muscke
+    #create an alignment file with muscle
     if(user_OS == 'darwin'):
         muscle_exe = "static/tools/MacOS/muscle3.8.31_i86darwin64"
     if(user_OS == 'linux'):
@@ -75,9 +85,6 @@ def NJ_tree(infile, file_type):
     calculator = DistanceCalculator('identity')
     constructor = DistanceTreeConstructor(calculator, 'nj') # nj ou UPGMA
     tree = constructor.build_tree(aln)
-    # print(tree)
-    #display a tree on terminal
-    #Phylo.draw_ascii(tree)
     tree.ladderize()
     Phylo.draw(tree, do_show=False)
     Phylo.write(tree, 'static/data/sauvegardes/' + dirName + 'tree.txt', "newick")

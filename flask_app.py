@@ -1,3 +1,13 @@
+# Software engineering project
+# Authors : DENET Lola, DESQUERRE Émilie, HUI Tongyuxuan, MEGUERDITCHIAN Caroline, NIU Wenli, PRATX Julie, VU Thao Uyen
+# M2 Bioinformatics - Bordeaux university
+# December 14, 2020
+
+# flask_app.py
+# Used to make the link between the front-end and back-end part of the program.
+# Allows user-program interaction through a web interface linked to the Python program using Flask.
+
+
 from flask import Flask, render_template, request
 from datetime import timedelta
 import main
@@ -8,46 +18,46 @@ app.config['DEBUG'] = True
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = timedelta(seconds=1)
 
 @app.route('/')
-def mainAcceuil():
-    return render_template('Acceuil.html', selectedMenu="Accueil")
+def home():
+    return render_template('home.html', selectedMenu="Home")
 
 @app.route('/infos')
-def infos_caract():
+def infos():
     return render_template('infos.html', selectedMenu="Infos")
 
-@app.route('/bdd')
-def geneId():
+@app.route('/sequences')
+def sequences():
     res = main.id_list
     names = main.name_gene
-    return render_template('bdd.html', idlist=res,namegene=names, selectedMenu="Base de données")
+    return render_template('sequences.html', idlist=res,namegene=names, selectedMenu="Sequences")
 
 
-@app.route('/bdd',methods=['GET','POST'])
-def choixGene():
+@app.route('/sequences',methods=['GET','POST'])
+def getSequences():
     if request.method == "POST":
         if request.form["submit"] == 'submit':
-            id_list = request.form.getlist('choixGene')
+            id_list = request.form.getlist('getSequences')
             main.dirName = main.get_fasta(id_list)
     res=main.dirName
-    return render_template('Alignement.html', res=res, selectedMenu="Alignement")
+    return render_template('alignment.html', res=res, selectedMenu="Alignment")
 
-@app.route('/Alignement', methods=['POST'])
-def Alignement():
+@app.route('/alignment', methods=['POST'])
+def alignmentAndPhylogeny():
     if request.method == "POST":
         if request.form["fAli"] == "Clustal":
-            main.clustal_alignment("multifasta.fasta", "obtenu.fasta")
+            main.clustal_alignment("multifasta.fasta", "alignment.fasta")
             type = 'clustal'
         elif request.form["fAli"] == "Muscle":
-            main.muscle_alignment("multifasta.fasta", "obtenu.fasta")
+            main.muscle_alignment("multifasta.fasta", "alignment.fasta")
             type = 'fasta'
 
         if request.form["tree"] == "Neighbor Joining":
-            main.NJ_tree("obtenu.fasta", type)
+            main.NJ_tree("alignment.fasta", type)
         elif request.form["tree"] == "Maximum Likelihood":
-            main.ML_tree("obtenu.fasta", "msa_muscle", type)
+            main.ML_tree("alignment.fasta", "multiple_sequences_alignment", type)
         res=main.dirName
-        return render_template('tree.html', res=res, selectedMenu="Phylogénie")
- 
+        return render_template('phylogeny.html', res=res, selectedMenu="Phylogeny")
+
 
 if __name__ == '__main__':
     app.debug = True
