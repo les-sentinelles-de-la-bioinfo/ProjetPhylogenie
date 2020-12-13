@@ -1,8 +1,5 @@
 # Guide Utilisateur
 
-Sommaire : 
-
-
 
 ## Composition du site
 Le site est composé de plusieurs pages dont chacune d'entre-elles a une fonction particulière.
