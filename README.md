@@ -3,9 +3,9 @@
 ## Sommaire :  <a id="sommaire"></a>
 
 
-[- Guide installation et de configuration de WAMP sur Windows](#guidewamp)
+[- Guide d'installation et de configuration de WAMP sur Windows](#guidewamp)
 
-[- Guide installation et de configuration de LAMP sur Linux](#guidelinux)
+[- Guide d'installation et de configuration de LAMP sur Linux](#guidelinux)
 
 
 ## Composition du site
