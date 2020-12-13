@@ -83,7 +83,7 @@ https://www.python.org/downloads/
 
 https://github.com/les-sentinelles-de-la-bioinfo/ProjetPhylogenie
 
-3. Créer l'environnement virtuel dans le répertoire contenant `flask\_app.py`
+3. Créer l'environnement virtuel dans le répertoire contenant `flask_app.py`
 
 `python3 -m venv env`
 
